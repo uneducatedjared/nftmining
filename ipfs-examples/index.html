@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>IPFS图片上传工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="upload-container">
+        <!-- 隐藏原生文件输入 -->
+        <input type="file" id="ipfsUpload" accept="image/*" style="display: none;">
+        
+        <!-- 自定义上传区域 -->
+        <label for="ipfsUpload" class="upload-box">
+            <div class="upload-icon">📤</div>
+            <p>点击选择图片或拖放文件到此区域</p>
+        </label>
+        
+        <!-- 图片预览 -->
+        <div class="preview-container">
+            <img id="imagePreview" src="#" alt="图片预览">
+        </div>
+        
+        <!-- 结果显示 -->
+        <div class="result-box">
+            <p>IPFS地址：<span id="ipfsHash">等待上传...</span></p>
+            <button onclick="copyHash()" class="copy-btn">复制地址</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
