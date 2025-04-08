@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT铸造工坊 - Web3图片上传铸造平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="nft-container">
+        <!-- 顶部导航 -->
+        <nav class="nav-header">
+            <h1>🖼️ NFT铸造工坊</h1>
+            <button class="wallet-btn" id="connectWallet">
+                <i class="fas fa-wallet"></i>
+                连接钱包
+            </button>
+        </nav>
+
+        <!-- 图片上传区域 -->
+        <section class="upload-section">
+            <input type="file" id="file-input" accept="image/*" />
+            <label for="file-input" class="upload-label">
+                <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                <h2>拖放图片文件或点击上传</h2>
+                <p>支持格式: JPG/PNG/GIF</p>
+                <img src="#" id = "imagePreview" class="preview-image" alt="图片预览">
+            </label>
+        </section>
+
+        <!-- 元数据表单 -->
+        <form class="metadata-form">
+            <div class="form-group">
+                <label for="nftName">NFT名称</label>
+                <input type="text" id="nftName" class="form-input" placeholder="输入独一无二的名称">
+            </div>
+            
+            <div class="form-group">
+                <label for="nftDescription">描述</label>
+                <textarea id="nftDescription" class="form-input" rows="4" 
+                    placeholder="描述你的数字藏品（至少50字）"></textarea>
+            </div>
+        </form>
+
+        <!-- 铸造按钮 -->
+        <button class="mint-btn">
+            <i class="fas fa-magic"></i>
+            立即铸造NFT
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

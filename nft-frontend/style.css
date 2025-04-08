@@ -1,0 +1,147 @@
+/* 基础样式重置与Web3主题色 */
+:root {
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-primary: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui;
+    background: var(--background);
+    color: var(--text-primary);
+    min-height: 100vh;
+}
+
+/* 主容器 */
+.nft-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: var(--surface);
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* 顶部导航 */
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.wallet-btn {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.wallet-btn i {
+    font-size: 1.2rem;
+}
+
+/* 上传区域 */
+.upload-section {
+    border: 2px dashed rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    transition: border-color 0.3s;
+    position: relative;
+}
+
+.upload-section:hover {
+    border-color: var(--primary);
+}
+
+#file-input {
+    display: none;
+}
+
+.upload-label {
+    cursor: pointer;
+    display: block;
+}
+
+.upload-icon {
+    font-size: 3rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.preview-image {
+    max-width: 300px;
+    border-radius: 0.8rem;
+    margin: 1rem auto;
+    display: none;
+}
+
+/* 元数据表单 */
+.metadata-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    background: #2d3748;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 0.6rem;
+    color: inherit;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* 铸造按钮 */
+.mint-btn {
+    background: var(--primary);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0.8rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.mint-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* 响应式设计 */
+@media (max-width: 640px) {
+    .nft-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
